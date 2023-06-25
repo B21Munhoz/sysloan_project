@@ -1,0 +1,10 @@
+services:
+  client:
+    build: .
+    ports:
+      - "1000:80"
+    networks:
+      - custom_network
+networks:
+  custom_network:
+    external: true

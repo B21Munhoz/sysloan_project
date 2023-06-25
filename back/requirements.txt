@@ -1,0 +1,8 @@
+django
+requests
+djangorestframework
+markdown
+django-filter
+celery[redis]
+psycopg2-binary
+django_better_admin_arrayfield
