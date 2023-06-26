@@ -4,10 +4,14 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-const url = "http://0.0.0.0:8000/";
+const String serverIP = String.fromEnvironment(
+    'SERVER_IP',
+    defaultValue: '',
+  );
+const url = "http://$serverIP:8000/";
 Future<FormConfig> fetchFormFields() async {
-  final response = await http
-      .get(Uri.parse('${url}get_form_fields/'));
+  
+  final response = await http.get(Uri.parse('${url}get_form_fields/'));
   try {
     if (response.statusCode == 200) {
       // If the server did return a 200 OK response,

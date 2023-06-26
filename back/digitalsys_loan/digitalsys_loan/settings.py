@@ -26,7 +26,10 @@ SECRET_KEY = 'django-insecure-$490#jlf$0!+n2$&t@rft3cic=0ktw0lm&eqvua(j!@#8(ekr@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", True)
 
-ALLOWED_HOSTS = ["127.0.0.1", "0.0.0.0"]
+# ALLOWED_HOSTS = ["127.0.0.1", "0.0.0.0"]
+# Como não sabemos qual será o host do client, para rodar local podemos deixar com
+# todos os hosts autorizados.
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
